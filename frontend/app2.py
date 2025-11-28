@@ -1,6 +1,10 @@
-import streamlit as st
 import sys
-sys.path.append("backend")   # 🔥 allows importing backend module
+import os
+import streamlit as st
+# Add backend folder to PYTHONPATH (VERY IMPORTANT FOR STREAMLIT CLOUD)
+BACKEND_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'backend'))
+if BACKEND_PATH not in sys.path:
+    sys.path.append(BACKEND_PATH)
 
 from rag_backend import (
     process_pdf,
@@ -9,6 +13,7 @@ from rag_backend import (
     answer_question,
     save_summary_txt,
 )
+
 
 
 # ----------------------------------------------------
