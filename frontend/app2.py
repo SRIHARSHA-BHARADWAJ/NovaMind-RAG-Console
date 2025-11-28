@@ -1,4 +1,7 @@
 import streamlit as st
+import sys
+sys.path.append("backend")   # 🔥 allows importing backend module
+
 from rag_backend import (
     process_pdf,
     summarize_document_hierarchical,
@@ -6,6 +9,7 @@ from rag_backend import (
     answer_question,
     save_summary_txt,
 )
+
 
 # ----------------------------------------------------
 #                GLOBAL PAGE SETTINGS
