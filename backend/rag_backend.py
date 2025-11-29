@@ -40,8 +40,8 @@ except Exception:
 
 # ---------------- CONFIG (tweakable) ----------------
 EMBED_MODEL = "all-MiniLM-L6-v2"
-PREFERRED_LLM = "google/flan-t5-large"
-FALLBACK_LLM = "google/flan-t5-base"
+PREFERRED_LLM = "google/flan-t5-base"
+FALLBACK_LLM = "google/flan-t5-small"
 
 # Aggressive chunking for high-quality retrieval
 CHUNK_SIZE = 150
